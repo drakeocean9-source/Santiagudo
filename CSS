@@ -1,1 +1,257 @@
 
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef3f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #142d4e, #2874a6);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.highlight {
+    color: #f9c74f;
+}
+
+/* MAIN LAYOUT */
+.main-area {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    align-items: flex-start;
+}
+
+/* CONTENT AREA */
+.content {
+    flex: 3;
+    min-width: 0;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #dce5ef;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+}
+
+/* PROFILE IMAGE */
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #dceaf7;
+}
+
+/* PROFILE INFORMATION */
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    color: #142d4e;
+    font-size: 26px;
+    margin: 0 0 8px;
+}
+
+.tagline {
+    color: #777;
+    font-size: 15px;
+    margin: 5px 0 15px;
+}
+
+.bio {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+    background-color: #2874a6;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #142d4e;
+}
+
+/* DESCRIPTION SECTION */
+.description {
+    background-color: white;
+    padding: 25px 30px;
+    border: 1px solid #dce5ef;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.description h3 {
+    color: #142d4e;
+    font-size: 22px;
+    margin-top: 0;
+    border-bottom: 2px solid #2874a6;
+    padding-bottom: 10px;
+}
+
+.description p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex: 1;
+    min-width: 180px;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dce5ef;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar h3 {
+    color: #142d4e;
+    margin-top: 0;
+    border-bottom: 2px solid #2874a6;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 12px 0;
+}
+
+.sidebar a {
+    display: block;
+    color: #2874a6;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #e6f1fa;
+    color: #142d4e;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #142d4e;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .main-area {
+        flex-direction: column;
+    }
+
+    .content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio {
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    .description {
+        padding: 20px;
+    }
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+}
+
